@@ -1,0 +1,24 @@
+.categories
+    position fixed
+    left 10px
+    top 10px
+    
+a.category
+    display block
+    width 35px
+    height 35px
+    background-color #0f1110
+    background-position center center
+    background-repeat no-repeat
+    margin-bottom 5px
+    position relative
+    
+    &.active 
+        &:after
+            content ""
+            position absolute
+            left @width
+            top 0
+            height @height
+            width 15px
+            background #0f1110

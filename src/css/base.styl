@@ -1,0 +1,79 @@
+@import "modules/reset"
+@import "modules/fonts"
+
+$respDesktop = 801px
+
+*, *:after, *:before
+    box-sizing border-box
+        
+::selection
+    background #EF4198
+    color #FFF
+    text-shadow none
+
+::-moz-selection
+    background #EF4198
+    color #FFF
+    text-shadow none
+
+input, textarea
+    box-sizing content-box
+    -webkit-appearance none
+
+    &:focus
+        outline none
+
+.animate
+    opacity 0
+    perspective 1000
+    backface-visibility hidden
+
+html.js .animate
+    opacity 0
+        
+html.mobile, html.no-csstransitions
+    .animate
+        opacity 1 !important
+
+html
+    overflow-x hidden
+    width 100%
+    height 100%
+
+*    
+    -webkit-font-smoothing antialiased
+    -moz-osx-font-smoothing grayscale
+
+.hidden
+    display none
+
+.wf-loading
+    p, h1, h2, h3, h4, h5, .button, li, .download_app span
+        opacity 0
+
+.wf-active
+    p, h1, h2, h3, h4, h5, .button, li, .download_app span
+        opacity 1
+
+body
+    width 100%
+    height 100%
+    font-size 19px
+    font-family purista, sans-serif
+    font-weight 400
+    color #FFF
+    background url(../images/bg.jpg) no-repeat top left
+    background-size cover
+    overflow-x hidden
+    -webkit-overflow-scrolling touch
+
+    &.modal
+        height 100%
+        max-height 100%
+        overflow hidden
+
+@import "modules/buttons"
+@import "modules/categories"
+@import "modules/category-items"
+@import "modules/accessory-categories"
+@import "modules/scrollbar"
